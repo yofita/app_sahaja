@@ -1,0 +1,13 @@
+.dbconf
+.pyc
+__pycache__
+settings.py
+/node_modules
+/env
+package.json
+.sock
+/error_log
+/access_log
+*.csv
+output
+spatial_data
