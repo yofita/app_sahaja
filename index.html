@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>webgis ATR/BPN</title>
+    <title>SAHAJA</title>
     <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
     <script src="https://unpkg.com/elm-pep"></script>
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
@@ -75,10 +75,112 @@
           <div id="layerController-content" class="accordion-collapse collapse show" data-bs-parent="#webgisController">
             <div class="accordion-body">
               <div class="row">
-                <label class="col-sm-5 col-form-label search-analysis-label">HGU / HPL</label>
-                <div class="col-sm-7 search-analysis">
+                <label class="col-sm-7 col-form-label search-analysis-label"><strong>Administrasi Kabupaten / Kota</strong></label>
+                <div class="col-sm-5 search-analysis">
                   <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="isHguHpl">
+                    <input class="form-check-input" type="checkbox" id="isAdminKabkot" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label"><strong>Administrasi Kecamatan</strong></label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isAdminKec" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label"><strong>Wilayah Pengelolaan Laut Kabupaten</strong></label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isWpl" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label"><strong>Bidang Tanah</strong></label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isPersil">
+                  </div>
+                </div>                
+              </div>
+
+              <strong>Kesesuaian Lahan Tebu</strong>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2022</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isTebu2022" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2021</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isTebu2021" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2020</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isTebu2020" checked>
+                  </div>
+                </div>                
+              </div>
+
+              <strong>Kesesuaian Lahan Teh</strong>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2022</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isTeh2022" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2021</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isTeh2021" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2020</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isTeh2020" checked>
+                  </div>
+                </div>                
+              </div>
+
+              <strong>Kesesuaian Lahan Perikanan</strong>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2022</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isPerikanan2022" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2021</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isPerikanan2021" checked>
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <label class="col-sm-7 col-form-label search-analysis-label">&nbsp;Tahun 2020</label>
+                <div class="col-sm-5 search-analysis">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="isPerikanan2020" checked>
                   </div>
                 </div>                
               </div>

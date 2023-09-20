@@ -15,33 +15,101 @@ import {ScaleLine, defaults as defaultControls} from 'ol/control';
 
 /* All WMS */
 const wmsLandSuitTeh = new TileWMS ({
-  url: 'http://localhost:8080/geoserver/landsuit_jateng/wms',
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
   params: {
     'FORMAT': 'image/png',
     'VERSION': '1.1.1',
-    'LAYERS': 'landsuit_jateng:teh_2022',
+    'LAYERS': 'sahaja:teh_2022',
     'TILED': true
   },
   hidpi: 'true',
   serverType: 'geoserver',
 });
+const wmsLandSuitTeh2021 = new TileWMS ({
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
+  params: {
+    'FORMAT': 'image/png',
+    'VERSION': '1.1.1',
+    'LAYERS': 'sahaja:teh_2021',
+    'TILED': true
+  },
+  hidpi: 'true',
+  serverType: 'geoserver',
+});
+const wmsLandSuitTeh2020 = new TileWMS ({
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
+  params: {
+    'FORMAT': 'image/png',
+    'VERSION': '1.1.1',
+    'LAYERS': 'sahaja:teh_2020',
+    'TILED': true
+  },
+  hidpi: 'true',
+  serverType: 'geoserver',
+});
+
 const wmsLandSuitTebu = new TileWMS ({
-  url: 'http://localhost:8080/geoserver/landsuit_jateng/wms',
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
   params: {
     'FORMAT': 'image/png',
     'VERSION': '1.1.1',
-    'LAYERS': 'landsuit_jateng:tebu_2022',
+    'LAYERS': 'sahaja:tebu_2022',
     'TILED': true
   },
   hidpi: 'true',
   serverType: 'geoserver',
 });
-const wmsLandSuitPerikanan = new TileWMS ({
-  url: 'http://localhost:8080/geoserver/landsuit_jateng/wms',
+const wmsLandSuitTebu2021 = new TileWMS ({
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
   params: {
     'FORMAT': 'image/png',
     'VERSION': '1.1.1',
-    'LAYERS': 'landsuit_jateng:perikanan_2022',
+    'LAYERS': 'sahaja:tebu_2021',
+    'TILED': true
+  },
+  hidpi: 'true',
+  serverType: 'geoserver',
+});
+const wmsLandSuitTebu2020 = new TileWMS ({
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
+  params: {
+    'FORMAT': 'image/png',
+    'VERSION': '1.1.1',
+    'LAYERS': 'sahaja:tebu_2020',
+    'TILED': true
+  },
+  hidpi: 'true',
+  serverType: 'geoserver',
+});
+
+const wmsLandSuitPerikanan = new TileWMS ({
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
+  params: {
+    'FORMAT': 'image/png',
+    'VERSION': '1.1.1',
+    'LAYERS': 'sahaja:perikanan_2022',
+    'TILED': true
+  },
+  hidpi: 'true',
+  serverType: 'geoserver',
+});
+const wmsLandSuitPerikanan2021 = new TileWMS ({
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
+  params: {
+    'FORMAT': 'image/png',
+    'VERSION': '1.1.1',
+    'LAYERS': 'sahaja:perikanan_2021',
+    'TILED': true
+  },
+  hidpi: 'true',
+  serverType: 'geoserver',
+});
+const wmsLandSuitPerikanan2020 = new TileWMS ({
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
+  params: {
+    'FORMAT': 'image/png',
+    'VERSION': '1.1.1',
+    'LAYERS': 'sahaja:perikanan_2020',
     'TILED': true
   },
   hidpi: 'true',
@@ -49,11 +117,11 @@ const wmsLandSuitPerikanan = new TileWMS ({
 });
 
 const wmsAdmKabkot = new TileWMS ({
-  url: 'http://localhost:8080/geoserver/landsuit_jateng/wms',
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
   params: {
     'FORMAT': 'image/png',
     'VERSION': '1.1.1',
-    'LAYERS': 'landsuit_jateng:kabkot_admin',
+    'LAYERS': 'sahaja:kabkot_admin',
     'TILED': true
   },
   hidpi: 'true',
@@ -61,11 +129,11 @@ const wmsAdmKabkot = new TileWMS ({
 });
 
 const wmsAdmKecamatan = new TileWMS ({
-  url: 'http://localhost:8080/geoserver/landsuit_jateng/wms',
+  url: 'http://103.178.153.209/geoserver/sahaja/wms',
   params: {
     'FORMAT': 'image/png',
     'VERSION': '1.1.1',
-    'LAYERS': 'landsuit_jateng:kecamatan_admin',
+    'LAYERS': 'sahaja:kecamatan_admin',
     'TILED': true
   },
   hidpi: 'true',
@@ -73,16 +141,30 @@ const wmsAdmKecamatan = new TileWMS ({
 });
 
 const wmsWplKabkot = new TileWMS ({
-  url: "http://localhost:8080/geoserver/landsuit_jateng/wms",
+  url: "http://103.178.153.209/geoserver/sahaja/wms",
   params: {
     'FORMAT': 'image/png',
     'VERSION': '1.1.1',
-    'LAYERS': 'landsuit_jateng:wpl_kabkota_4nm',
+    'LAYERS': 'sahaja:wpl_kabkota_4nm',
+    'CQL_FILTER': "provinsi='Jawa Tengah'",
     'TILED': true
   },
   hidpi: 'true',
   serverType: 'geoserver',
 });
+
+const wmsPersilJateng = new TileWMS ({
+  url: "http://103.178.153.209/geosv2/pemda/wms?authkey=8a3e974b-b527-49ef-b107-455094962abe",
+  params: {
+    'FORMAT': 'image/png',
+    'VERSION': '1.1.1',
+    'LAYERS': 'pemda:persiljateng',
+    'TILED': true
+  },
+  hidpi: 'true',
+  serverType: 'geoserver',
+});
+
 
 /* Layers Defined */
 const layers = [
@@ -90,13 +172,34 @@ const layers = [
     source: new OSM(),
   }),
   new TileLayer({
+    source: wmsLandSuitTeh2020,
+  }),
+  new TileLayer({
+    source: wmsLandSuitTeh2021,
+  }),
+  new TileLayer({
     source: wmsLandSuitTeh,
+  }),
+  new TileLayer({
+    source: wmsLandSuitTebu2020,
+  }),
+  new TileLayer({
+    source: wmsLandSuitTebu2021,
   }),
   new TileLayer({
     source: wmsLandSuitTebu,
   }),
   new TileLayer({
+    source: wmsLandSuitPerikanan2020,
+  }),
+  new TileLayer({
+    source: wmsLandSuitPerikanan2021,
+  }),
+  new TileLayer({
     source: wmsLandSuitPerikanan,
+  }),
+  new TileLayer({
+    source: wmsPersilJateng,
   }),
   new TileLayer({
     source: wmsAdmKabkot,
@@ -121,6 +224,8 @@ const map = new Map({
   view: view
 });
 
+map.getLayers().getArray()[10].setVisible(false)
+
 // Map Event
 // map.on('singleclick', function (evt) {
 //   const clicked_coordinate = evt.coordinate;
@@ -131,16 +236,14 @@ const map = new Map({
 
 
 //   var params = {
-//     // authkey: '4a7725ba-782q-4595-8f85-3951e14d12v4',
-//     //authkey: '4a7725ba-782q-4595-8f85-3951e14d12l1',
 //     service: 'WMS',
 //     info_format: 'application/json',
 //     request: 'GetFeatureInfo',
 //     exceptions: 'application/vnd.ogc.se_xml',
 //     version: '1.1.1',
-//     layers: 'umum:PersilHak',
-//     query_layers: 'umum:PersilHak',
-//     typename: 'umum:PersilHak',
+//     layers: '',
+//     query_layers: '',
+//     typename: '',
 //     x: Math.ceil(pixel_coordinate[0]),
 //     y: Math.ceil(pixel_coordinate[1]),
 //     bbox: extent.toString(),
@@ -340,7 +443,7 @@ map.addControl(scaleControl());
 
 // Wilayah Pengelolaan Laut Controller
 // Kabkot options
-fetch('http://localhost:8000/getwplkabkot')
+fetch('http://103.178.153.209/api/getwplkabkot')
   .then(response => response.json())
   .then(data => {
       let kabkotlaut_opt = document.querySelector(".kabkotlaut-opt");
@@ -354,7 +457,7 @@ fetch('http://localhost:8000/getwplkabkot')
 document.querySelector('#searchKabkotLaut').onchange = function () {
 
     let kabkotlaut_value = document.querySelector(".kabkotlaut-opt").value;
-    let wfs_geojson = 'http://localhost:8080/geoserver/landsuit_jateng/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=landsuit_jateng:wpl_kabkota_4nm&outputFormat=application/json';
+    let wfs_geojson = 'http://103.178.153.209/geoserver/sahaja/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=sahaja:wpl_kabkota_4nm&outputFormat=application/json';
     fetch(wfs_geojson + "&CQL_FILTER=kabupaten_='"+kabkotlaut_value+"'")
       .then(response => response.json())
       .then(data => {  
@@ -381,7 +484,7 @@ document.querySelector('#searchKabkotLaut').onchange = function () {
 
 // Batas Administrasi Controller
 // Kabkot options
-fetch('http://localhost:8000/getkabkot')
+fetch('http://103.178.153.209/api/getkabkot')
   .then(response => response.json())
   .then(data => {
       let kabkot_opt = document.querySelector(".kabkot-opt");
@@ -396,12 +499,12 @@ document.querySelector('#searchKabkot').onchange = function () {
 
   document.querySelector(".kecamatan-opt").innerHTML = "";
   let kabkot_value = document.querySelector(".kabkot-opt").value;
-  let wfs_geojson = 'http://localhost:8080/geoserver/landsuit_jateng/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=landsuit_jateng:kabkot_admin&outputFormat=application/json';
+  let wfs_geojson = 'http://103.178.153.209/geoserver/sahaja/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=sahaja:kabkot_admin&outputFormat=application/json';
   fetch(wfs_geojson + "&CQL_FILTER=wadmkk='"+kabkot_value+"'")
     .then(response => response.json())
     .then(data => {
         // Kecamatan options
-        fetch('http://localhost:8000/getkecamatan?wadmkk='+kabkot_value)
+        fetch('http://103.178.153.209/api/getkecamatan?wadmkk='+kabkot_value)
           .then(response => response.json())
           .then(data => {
               let kecamatan_opt = document.querySelector(".kecamatan-opt");
@@ -431,7 +534,7 @@ document.querySelector('#searchKabkot').onchange = function () {
         document.querySelector('#searchKec').onchange = function () {
           
           let kecamatan_value = document.querySelector(".kecamatan-opt").value;
-          let wfs_geojson = 'http://localhost:8080/geoserver/landsuit_jateng/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=landsuit_jateng:kecamatan_admin&outputFormat=application/json';
+          let wfs_geojson = 'http://103.178.153.209/geoserver/sahaja/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=sahaja:kecamatan_admin&outputFormat=application/json';
           fetch(wfs_geojson + "&CQL_FILTER=wadmkc='"+kecamatan_value+"'")
             .then(response => response.json())
             .then(data => {
@@ -470,7 +573,7 @@ function postLandSuitProcess(geojsonmask, nama_kecamatan){
   let end_year = document.querySelector('.yearend-opt').value;
   let dataType = document.querySelector('.tipedata-opt').value;
   console.log(geojsonmask)
-  fetch("http://localhost:8000/landsuit_process", {
+  fetch("http://103.178.153.209/api/landsuit_process", {
     method: 'POST',
     body: JSON.stringify({
         "mask_polygon": JSON.stringify(geojsonmask),
@@ -564,3 +667,65 @@ function postLandSuitProcess(geojsonmask, nama_kecamatan){
 
   });
 }
+
+
+// Show Hide Layers
+var isPersil = document.getElementById('isPersil');
+isPersil.addEventListener('click', function () {
+  map.getLayers().getArray()[10].setVisible(this.checked);
+});
+
+var isAdminKabkot = document.getElementById('isAdminKabkot');
+isAdminKabkot.addEventListener('click', function () {
+  map.getLayers().getArray()[11].setVisible(this.checked);
+});
+
+var isAdminKec = document.getElementById('isAdminKec');
+isAdminKec.addEventListener('click', function () {
+  map.getLayers().getArray()[12].setVisible(this.checked);
+});
+
+var isWpl = document.getElementById('isWpl');
+isWpl.addEventListener('click', function () {
+  map.getLayers().getArray()[13].setVisible(this.checked);
+});
+
+var isTeh2020 = document.getElementById('isTeh2020');
+isTeh2020.addEventListener('click', function () {
+  map.getLayers().getArray()[1].setVisible(this.checked);
+});
+var isTeh2021 = document.getElementById('isTeh2021');
+isTeh2021.addEventListener('click', function () {
+  map.getLayers().getArray()[2].setVisible(this.checked);
+});
+var isTeh2022 = document.getElementById('isTeh2022');
+isTeh2022.addEventListener('click', function () {
+  map.getLayers().getArray()[3].setVisible(this.checked);
+});
+
+var isTebu2020 = document.getElementById('isTebu2020');
+isTebu2020.addEventListener('click', function () {
+  map.getLayers().getArray()[4].setVisible(this.checked);
+});
+var isTebu2021 = document.getElementById('isTebu2021');
+isTebu2021.addEventListener('click', function () {
+  map.getLayers().getArray()[5].setVisible(this.checked);
+});
+var isTebu2022 = document.getElementById('isTebu2022');
+isTebu2022.addEventListener('click', function () {
+  map.getLayers().getArray()[6].setVisible(this.checked);
+});
+
+var isPerikanan2020 = document.getElementById('isPerikanan2020');
+isPerikanan2020.addEventListener('click', function () {
+  map.getLayers().getArray()[7].setVisible(this.checked);
+});
+var isPerikanan2021 = document.getElementById('isPerikanan2021');
+isPerikanan2021.addEventListener('click', function () {
+  map.getLayers().getArray()[8].setVisible(this.checked);
+});
+var isPerikanan2022 = document.getElementById('isPerikanan2022');
+isPerikanan2022.addEventListener('click', function () {
+  map.getLayers().getArray()[9].setVisible(this.checked);
+});
+
